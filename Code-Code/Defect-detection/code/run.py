@@ -44,12 +44,14 @@ from tqdm import tqdm, trange
 import multiprocessing
 from model import Model
 cpu_cont = multiprocessing.cpu_count()
-from transformers import (WEIGHTS_NAME, AdamW, get_linear_schedule_with_warmup,
+from transformers import (WEIGHTS_NAME, get_linear_schedule_with_warmup,
                           BertConfig, BertForMaskedLM, BertTokenizer, BertForSequenceClassification,
                           GPT2Config, GPT2LMHeadModel, GPT2Tokenizer,
                           OpenAIGPTConfig, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer,
                           RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer,
                           DistilBertConfig, DistilBertForMaskedLM, DistilBertForSequenceClassification, DistilBertTokenizer)
+
+from transformers.optimization import AdamW
 
 logger = logging.getLogger(__name__)
 
